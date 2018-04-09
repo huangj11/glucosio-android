@@ -203,7 +203,7 @@
         </service>
 
         <receiver
-            android:name="org.glucosio.android.receivers.GlucosioBroadcastReceiver"
+            android:name=".receivers.GlucosioBroadcastReceiver"
             android:enabled="false">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
@@ -255,11 +255,13 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
             <meta-data
                 android:name="android.app.shortcuts"
                 android:resource="@xml/shortcuts" />
         </activity>
-        <activity android:name=".activity.RemindersActivity"></activity>
+        <activity android:name=".activity.RemindersActivity" />
+        <activity android:name=".activity.WorkoutMain"></activity>
     </application>
 
 </manifest>
