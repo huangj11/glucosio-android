@@ -1,4 +1,17 @@
 /*
+Name: Julie Huang
+Course: CSC 415
+Semester: Spring 2018
+Instructor: Dr. Pulimood
+Project name: Assignment 4
+Description: This program utilizes the Glucosio open source code, and assists diabetic users in tracking their glucose levels. This projects seeks to implement a mode in which the user can enter in their glucose level and get information on their glucose level in relation to physical activity.
+
+Filename: MainActivity.java
+Description: This file is the main Java activity page that contains the menu and all relevant links, tabs, and functions. The added implementation features adding Workout Mode to the drawer.
+last modified 4/16/2018
+*/
+
+/*
  * Copyright (C) 2016 Glucosio Foundation
  *
  * This file is part of Glucosio.
@@ -186,6 +199,8 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
         final PrimaryDrawerItem itemDonate = new PrimaryDrawerItem().withName(R.string.about_donate).withIcon(VectorDrawableCompat.create(getResources(), R.drawable.ic_favorite_grey_24dp, null)).withSelectable(false).withTypeface(Typeface.DEFAULT_BOLD);
         final PrimaryDrawerItem itemA1C = new PrimaryDrawerItem().withName(R.string.activity_converter_title).withIcon(VectorDrawableCompat.create(getResources(), R.drawable.ic_calculator_a1c_grey_24dp, null)).withSelectable(false).withTypeface(Typeface.DEFAULT_BOLD);
         final PrimaryDrawerItem itemReminders = new PrimaryDrawerItem().withName(R.string.activity_reminders_title).withIcon(VectorDrawableCompat.create(getResources(), R.drawable.ic_alarm_grey_24dp, null)).withSelectable(false).withTypeface(Typeface.DEFAULT_BOLD);
+        final PrimaryDrawerItem itemWorkout = new PrimaryDrawerItem().withName("Workout Mode").withIcon(VectorDrawableCompat.create(getResources(), R.drawable.ic_alarm_grey_24dp, null)).withSelectable(false).withTypeface(Typeface.DEFAULT_BOLD);
+
 
         DrawerBuilder drawerBuilder = new DrawerBuilder()
                 .withActivity(this)
@@ -223,10 +238,16 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
                         } else if (drawerItem.equals(itemReminders)) {
                             openRemindersActivity();
                         }
+                        else if (drawerItem.equals(itemWorkout)) {
+                            //Workout mode
+                            //Added implementation
+                            openWorkoutMode();
+                        }
                         return false;
                     }
                 });
 
+        //builds drawer if play services available
         if (isPlayServicesAvailable()) {
             drawerBuilder.addDrawerItems(
                     itemA1C,
@@ -236,7 +257,8 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
                     itemFeedback,
                     itemAbout,
                     itemDonate,
-                    itemInvite
+                    itemInvite,
+                    itemWorkout //added implementation
             )
                     .withSelectedItem(-1)
                     .build();
@@ -248,7 +270,8 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
                     itemSettings,
                     itemFeedback,
                     itemAbout,
-                    itemDonate
+                    itemDonate,
+                    itemWorkout //added implementation
             )
                     .withSelectedItem(-1)
                     .build();
@@ -268,6 +291,21 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
         Analytics analytics = application.getAnalytics();
         Log.i("MainActivity", "Setting screen name: " + "main");
         analytics.reportScreen("Main Activity");
+    }
+
+    //method to start mode--added implementation
+    //-----------------------------------------------------------------------------------------
+//
+//  Function: openWorkoutMode ()
+//
+//    Parameters:    N/A
+//
+//    Pre-condition: Drawer item implemented correctly
+//    Post-condition: WorkoutMain activity is started
+//-----------------------------------------------------------------------------------------
+    private void openWorkoutMode() {
+        Intent intent = new Intent(this, WorkoutMain.class);
+        startActivity(intent);
     }
 
     private void openRemindersActivity() {
@@ -374,6 +412,7 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
         finish();
     }
 
+
     public void onGlucoseFabClicked(View v) {
         openNewAddActivity(AddGlucoseActivity.class);
     }
@@ -390,9 +429,7 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
         openNewAddActivity(AddA1CActivity.class);
     }
 
-    public void onCholesterolFabClicked(View v) {
-        openNewAddActivity(AddCholesterolActivity.class);
-    }
+    public void onCholesterolFabClicked(View v) { openNewAddActivity(AddCholesterolActivity.class); }
 
     public void onWeightFabClicked(View v) {
         openNewAddActivity(AddWeightActivity.class);

@@ -261,7 +261,10 @@
                 android:resource="@xml/shortcuts" />
         </activity>
         <activity android:name=".activity.RemindersActivity" />
-        <activity android:name=".activity.WorkoutMain"></activity>
+        <activity android:name=".activity.WorkoutMain" />
+        <activity android:name=".activity.DisplayRangeInfo" />
+        <activity android:name=".activity.AddGlucoseActivityWorkout" />
+        <activity android:name=".activity.WorkoutHistory"></activity>
     </application>
 
 </manifest>

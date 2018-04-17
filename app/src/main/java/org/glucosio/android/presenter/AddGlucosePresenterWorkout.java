@@ -1,29 +1,22 @@
 /*
- * Copyright (C) 2016 Glucosio Foundation
- *
- * This file is part of Glucosio.
- *
- * Glucosio is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, version 3.
- *
- * Glucosio is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with Glucosio.  If not, see <http://www.gnu.org/licenses/>.
- *
- *
- */
+Name: Julie Huang
+Course: CSC 415
+Semester: Spring 2018
+Instructor: Dr. Pulimood
+Project name: Assignment 4
+Description: This program utilizes the Glucosio open source code, and assists diabetic users in tracking their glucose levels. This projects seeks to implement a mode in which the user can enter in their glucose level and get information on their glucose level in relation to physical activity.
+
+Filename: AddGlucosePresenterWorkout.java
+Description: This presenter file borrows from the AddGlucosePresenter.java from the original OSS, with the only change being to AddGlucosePresenterWorkout() to accommodate the Workout Mode feature.
+Last modified on: 4/17/2018
+*/
 
 package org.glucosio.android.presenter;
 
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
+
 import org.glucosio.android.Constants;
-import org.glucosio.android.activity.AddGlucoseActivity;
 import org.glucosio.android.activity.AddGlucoseActivityWorkout;
 import org.glucosio.android.db.DatabaseHandler;
 import org.glucosio.android.db.GlucoseReading;
@@ -37,18 +30,20 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-public class AddGlucosePresenter extends AddReadingPresenter {
+public class AddGlucosePresenterWorkout extends AddReadingPresenter {
     private static final int UNKNOWN_ID = -1;
     private DatabaseHandler dB;
-    private AddGlucoseActivity activity;
+    private AddGlucoseActivityWorkout activity;
     private ReadingTools rTools;
 
-    public AddGlucosePresenter(AddGlucoseActivity addGlucoseActivity) {
+    //Altered to accommodate workout mode implementation
+    //Changed AddGlucoseActivity to AddGlucoseActivityWorkout
+    public AddGlucosePresenterWorkout(AddGlucoseActivityWorkout addGlucoseActivity) {
         this.activity = addGlucoseActivity;
         dB = new DatabaseHandler(addGlucoseActivity.getApplicationContext());
         rTools = new ReadingTools();
     }
-
+    
 
     public void updateSpinnerTypeTime() {
         setReadingTimeNow();

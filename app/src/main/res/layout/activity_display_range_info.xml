@@ -5,7 +5,9 @@
     android:id="@+id/activity_reminders"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="org.glucosio.android.activity.RemindersActivity">
+    tools:context="org.glucosio.android.activity.DisplayRangeInfo">
+
+    
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/activity_main_toolbar"
@@ -19,29 +21,33 @@
         app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:titleTextAppearance="@style/Toolbar.WhiteText" />
 
+
     <TextView
-        android:id="@+id/ready"
+        android:id="@+id/rangeDisplay"
         android:layout_width="wrap_content"
-        android:layout_height="41dp"
-        android:text="@string/workout_welcome"
-        android:textColor="@color/glucosio_text_dark"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.346" />
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="117dp"
+        android:layout_marginEnd="115dp"
+        android:layout_marginStart="115dp"
+        android:layout_marginTop="119dp"
+        android:textColor="@color/glucosio_text"
+        android:textSize="@dimen/abc_text_size_subhead_material"
+        app:layout_constraintBottom_toTopOf="@+id/retest_glucose"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_main_toolbar"
+        tools:text="@string/workout_range" />
 
     <Button
-        android:id="@+id/test_glucose"
+        android:id="@+id/retest_glucose"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="205dp"
         android:layout_marginEnd="115dp"
         android:layout_marginStart="115dp"
         android:layout_marginTop="72dp"
-        android:text="Test blood sugar"
+        android:text="Test again"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
