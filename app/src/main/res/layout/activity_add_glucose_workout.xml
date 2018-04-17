@@ -1,4 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?><!--
+
+/*
+Name: Julie Huang
+Course: CSC 415
+Semester: Spring 2018
+Instructor: Dr. Pulimood
+Project name: Assignment 4
+Description: This project utilizes the Glucosio open source code, and assists diabetic users in tracking their glucose levels. This projects seeks to implement a mode in which the user can enter in their glucose level and get information on their glucose level in relation to physical activity.
+
+Filename: activity_add_glucose_workout.xml
+Description: xml for AddGlucoseWorkout
+*/
+
   ~ Copyright (C) 2016 Glucosio Foundation
   ~
   ~ This file is part of Glucosio.

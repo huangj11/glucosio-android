@@ -58,14 +58,16 @@ public class WorkoutHistory extends AppCompatActivity {
 //        Intent intent = getIntent();
 //        Double glucoseVal = intent.getDoubleExtra("glucoseToHist", 0);
 
-        Double glucoseVal = 0.0;
 
-        List<Double> workoutHistory;
-        workoutHistory = new ArrayList<Double>();
-        workoutHistory.add(glucoseVal);
+        //Populate arraylist with values and convert to list view
+        //FIXME
+        //String glucoseVal = "0.0";
+        List<String> workoutHistoryList = new ArrayList<String>();
+        workoutHistoryList.add("0.0");
 
-        ArrayAdapter<Double> arrayAdapter = new ArrayAdapter<Double>(this, android.R.layout.simple_list_item_1, workoutHistory );
-
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>( this,
+                android.R.layout.simple_list_item_1,
+                workoutHistoryList );
         glucoseHistLV.setAdapter(arrayAdapter);
     }
 
