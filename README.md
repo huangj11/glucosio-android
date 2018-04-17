@@ -1,3 +1,6 @@
+This program utilizes the Glucosio open source code, and assists diabetic users in tracking their glucose levels. This project, Glucosio: Workout Mode, seeks to implement a mode in which the user can enter in their glucose level and get information on their glucose level in relation to physical activity. There is also a functionality to allow users to view history, which will be fixed and implemented in future iterations.
+
+
 [![Crowdin](https://d322cqt584bo4o.cloudfront.net/glucosio/localized.png)](https://crowdin.com/project/glucosio)
 [![Build Status](https://travis-ci.org/Glucosio/glucosio-android.svg)](https://travis-ci.org/Glucosio/glucosio-android)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/a6f7bcc22a174ac9b36795438c143b6d)](https://www.codacy.com/app/Glucosio/glucosio-android?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Glucosio/glucosio-android&amp;utm_campaign=Badge_Grade)
