@@ -43,13 +43,13 @@ public class WorkoutHistory extends AppCompatActivity {
             getSupportActionBar().setTitle(getResources().getString(R.string.title_activity_view_history));
         }
         //Toolbar listener to go back to DisplayRangeInfo class
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),DisplayRangeInfo.class));
-                finish();
-            }
-        });
+//        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(getApplicationContext(),DisplayRangeInfo.class));
+//                finish();
+//            }
+//        });
         //new list view
         glucoseHistLV = (ListView) findViewById(R.id.workoutHistList);
 
@@ -65,6 +65,7 @@ public class WorkoutHistory extends AppCompatActivity {
         List<String> workoutHistoryList = new ArrayList<String>();
         workoutHistoryList.add("0.0");
 
+        //listview adapter
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>( this,
                 android.R.layout.simple_list_item_1,
                 workoutHistoryList );
@@ -72,4 +73,20 @@ public class WorkoutHistory extends AppCompatActivity {
     }
 
 
+    //-----------------------------------------------------------------------------------------
+//
+//  Function: onOptionsItemSelected ()
+//
+//    Parameters: input boolean; menu item selected
+//
+//    Pre-condition: input boolean is true
+//    Post-condition: User is taken back a page
+//-----------------------------------------------------------------------------------------
+    @Override
+    public boolean onOptionsItemSelected(MenuItem menuItem) {
+        if (menuItem.getItemId() == android.R.id.home) {
+            finish();
+        }
+        return super.onOptionsItemSelected(menuItem);
+    }
 }

@@ -22,19 +22,17 @@ Description: xml for WorkoutHistory
     android:layout_height="match_parent"
     tools:context="org.glucosio.android.activity.RemindersActivity">
 
-
-
-<android.support.v7.widget.Toolbar
-    android:id="@+id/activity_main_toolbar"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginBottom="16dp"
-    android:background="@color/glucosio_pink"
-    android:minHeight="?android:attr/actionBarSize"
-    app:contentInsetLeft="0dp"
-    app:contentInsetStart="0dp"
-    app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-    app:titleTextAppearance="@style/Toolbar.WhiteText" />
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/activity_main_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@color/glucosio_pink"
+        android:minHeight="?android:attr/actionBarSize"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:titleTextAppearance="@style/Toolbar.WhiteText" />
 
 
     <ListView

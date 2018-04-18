@@ -47,29 +47,29 @@
 
     <Button
         android:id="@+id/test_glucose"
-        android:layout_width="wrap_content"
+        android:layout_width="156dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="205dp"
         android:layout_marginEnd="115dp"
         android:layout_marginStart="115dp"
-        android:layout_marginTop="72dp"
+        android:background="@color/glucosio_accent"
         android:text="Test blood sugar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        />
-
+        app:layout_constraintStart_toStartOf="parent" />
+<!--
     <Button
         android:id="@+id/workout_history"
-        android:layout_width="wrap_content"
+        android:layout_width="196dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="130dp"
         android:layout_marginEnd="115dp"
         android:layout_marginStart="115dp"
-        android:layout_marginTop="100dp"
+        android:background="@color/glucosio_accent"
         android:text="View Workout History"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+        -->
 
 </android.support.constraint.ConstraintLayout>

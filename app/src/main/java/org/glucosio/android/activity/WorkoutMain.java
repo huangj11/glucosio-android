@@ -89,7 +89,7 @@ public class WorkoutMain extends AppCompatActivity {
 //        startActivity(intent);
 //    }
 
-    //Set toolbar action to take user back to MainActivity
+
     //-----------------------------------------------------------------------------------------
 //
 //  Function: onOptionsItemSelected ()
@@ -97,7 +97,7 @@ public class WorkoutMain extends AppCompatActivity {
 //    Parameters: input boolean; menu item selected
 //
 //    Pre-condition: input boolean is true
-//    Post-condition: User is returned to main activity page
+//    Post-condition: User is taken back a page
 //-----------------------------------------------------------------------------------------
     @Override
     public boolean onOptionsItemSelected(MenuItem menuItem) {

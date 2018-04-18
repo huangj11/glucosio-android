@@ -19,6 +19,7 @@ import android.support.design.widget.Snackbar;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
@@ -69,13 +70,13 @@ public class AddGlucoseActivityWorkout extends AddReadingActivity {
 
         //Toolbar listener to go back to DisplayRangeInfo class
         //Altered implementation
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),DisplayRangeInfo.class));
-                finish();
-            }
-        });
+//        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(getApplicationContext(),MainActivity.class));
+//                finish();
+//            }
+//        });
 
         this.retrieveExtra();
 
@@ -276,5 +277,23 @@ public class AddGlucoseActivityWorkout extends AddReadingActivity {
         super.onTimeSet(view, hourOfDay, minute);
         DecimalFormat df = new DecimalFormat("00");
         updateSpinnerTypeHour(Integer.parseInt(df.format(hourOfDay)));
+    }
+
+    //-----------------------------------------------------------------------------------------
+//
+//  Function: onOptionsItemSelected ()
+//
+//    Parameters: input boolean; menu item selected
+//
+//    Pre-condition: input boolean is true
+//    Post-condition: User is taken back a page
+//-----------------------------------------------------------------------------------------
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem menuItem) {
+        if (menuItem.getItemId() == android.R.id.home) {
+            finish();
+        }
+        return super.onOptionsItemSelected(menuItem);
     }
 }
