@@ -38,8 +38,7 @@ public class DisplayRangeInfo extends AppCompatActivity {
         if (toolbar != null) {
             setSupportActionBar(toolbar);
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-            //FIXME CHANGE ICON
-            //this.getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_action_close);
+            getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_close_white_18dp);
             getSupportActionBar().setElevation(2);
             getSupportActionBar().setTitle(getResources().getString(R.string.title_activity_workout_mode));
         }

@@ -50,6 +50,7 @@ public class WorkoutMain extends AppCompatActivity {
         if (toolbar != null) {
             setSupportActionBar(toolbar);
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_close_white_18dp);
             getSupportActionBar().setElevation(2);
             getSupportActionBar().setTitle(getResources().getString(R.string.title_activity_workout_mode));
         }
