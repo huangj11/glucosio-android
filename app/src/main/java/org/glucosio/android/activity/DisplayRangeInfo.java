@@ -38,6 +38,8 @@ public class DisplayRangeInfo extends AppCompatActivity {
         if (toolbar != null) {
             setSupportActionBar(toolbar);
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            //FIXME CHANGE ICON
+            //this.getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_action_close);
             getSupportActionBar().setElevation(2);
             getSupportActionBar().setTitle(getResources().getString(R.string.title_activity_workout_mode));
         }
@@ -53,6 +55,13 @@ public class DisplayRangeInfo extends AppCompatActivity {
         //In future implementation, this will be displayed along with the message
 //        Intent intent = getIntent();
 //        Double glucoseVal = intent.getDoubleExtra("glucose", 0);
+
+        //Populate arraylist with values and convert to list view
+        //FIXME
+
+//        List<String> workoutList = new ArrayList<String>();
+        //workoutHistoryList.add("0.0");
+//        workoutList.add(Double.toString(glucoseVal));
 
 
 
@@ -131,6 +140,10 @@ public class DisplayRangeInfo extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem menuItem) {
         if (menuItem.getItemId() == android.R.id.home) {
             finish();
+            Intent openMainActivity= new Intent(DisplayRangeInfo.this, MainActivity.class);
+            openMainActivity.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+            startActivityIfNeeded(openMainActivity, 0);
+
         }
         return super.onOptionsItemSelected(menuItem);
     }

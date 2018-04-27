@@ -246,6 +246,24 @@ public class AddGlucoseActivityWorkout extends AddReadingActivity {
 //        Intent intent2 = new Intent(this, DisplayRangeInfo.class);
 //        intent2.putExtra("glucose", glucose);
 //        startActivity(intent2);
+
+        /*AddGlucosePresenterWorkout presenter = (AddGlucosePresenterWorkout) getPresenter();
+        String readingType;
+        if (isCustomType) {
+            readingType = typeCustomEditText.getText().toString();
+        } else {
+            readingType = readingTypeSpinner.getSpinner().getSelectedItem().toString();
+        }
+
+        if (this.isEditing()) {
+            presenter.dialogOnAddButtonPressed(this.getAddTimeTextView().getText().toString(),
+                    this.getAddDateTextView().getText().toString(), readingTextView.getText().toString(),
+                    readingType, notesEditText.getText().toString(), this.getEditId());
+        } else {
+            presenter.dialogOnAddButtonPressed(this.getAddTimeTextView().getText().toString(),
+                    this.getAddDateTextView().getText().toString(), readingTextView.getText().toString(),
+                    readingType, notesEditText.getText().toString());
+        }*/
     }
 
     public void showErrorMessage() {
@@ -268,7 +286,7 @@ public class AddGlucoseActivityWorkout extends AddReadingActivity {
     }
 
     private void updateSpinnerTypeHour(int hour) {
-        AddGlucosePresenter presenter = (AddGlucosePresenter) getPresenter();
+        AddGlucosePresenterWorkout presenter = (AddGlucosePresenterWorkout) getPresenter();
         readingTypeSpinner.setSelection(presenter.hourToSpinnerType(hour));
     }
 
