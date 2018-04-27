@@ -238,6 +238,7 @@ public class AddGlucoseActivityWorkout extends AddReadingActivity {
         Intent intent = new Intent(this, DisplayRangeInfo.class);
         Bundle b = new Bundle();
         b.putString("range", message);
+        b.putString("glucose", Double.toString(glucose));
         intent.putExtras(b);
         startActivity(intent);
 

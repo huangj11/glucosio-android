@@ -28,6 +28,7 @@ import java.util.List;
 
 public class DisplayRangeInfo extends AppCompatActivity {
     TextView glucRange; //text to be changed
+    TextView displayGluc; //text to display glucose level
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,17 +44,26 @@ public class DisplayRangeInfo extends AppCompatActivity {
             getSupportActionBar().setTitle(getResources().getString(R.string.title_activity_workout_mode));
         }
 
-        //Retrieves and sets message
-        glucRange = (TextView) findViewById(R.id.rangeDisplay);
+        //retrieves message and glucose info
         Bundle b = getIntent().getExtras();
         String message = b.getString("range");
+        String glucoseVal = b.getString("glucose", "0");
+
+
+        //sets text to display glucose info
+        displayGluc = (TextView)findViewById(R.id.displayGlucose);
+        displayGluc.setText("Your glucose level is: ");
+        displayGluc.append(glucoseVal);
+
+
+
+
+        //sets message
+        glucRange = (TextView) findViewById(R.id.rangeDisplay);
         glucRange.setText(message);
 
 
-        //Retrieves glucose value
-        //In future implementation, this will be displayed along with the message
-//        Intent intent = getIntent();
-//        Double glucoseVal = intent.getDoubleExtra("glucose", 0);
+
 
         //Populate arraylist with values and convert to list view
         //FIXME

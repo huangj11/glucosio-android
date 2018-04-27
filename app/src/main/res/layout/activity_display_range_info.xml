@@ -35,6 +35,23 @@ Description: xml for DisplayRangeInfo
         app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:titleTextAppearance="@style/Toolbar.WhiteText" />
 
+    <TextView
+        android:id="@+id/displayGlucose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="200dp"
+        android:layout_marginEnd="115dp"
+        android:layout_marginStart="115dp"
+        android:layout_marginTop="100dp"
+        android:textColor="@color/glucosio_text"
+        android:textSize="@dimen/abc_text_size_subhead_material"
+        app:layout_constraintBottom_toTopOf="@+id/retest_glucose"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_main_toolbar"
+        tools:text="TextView" />
+
 
     <TextView
         android:id="@+id/rangeDisplay"
