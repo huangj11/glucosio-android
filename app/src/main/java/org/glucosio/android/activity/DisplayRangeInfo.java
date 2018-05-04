@@ -29,6 +29,7 @@ import java.util.List;
 public class DisplayRangeInfo extends AppCompatActivity {
     TextView glucRange; //text to be changed
     TextView displayGluc; //text to display glucose level
+    //Intent intent2 = new Intent(this, WorkoutHistory.class);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,34 +56,31 @@ public class DisplayRangeInfo extends AppCompatActivity {
         displayGluc.setText("Your glucose level is: ");
         displayGluc.append(glucoseVal);
 
-
-
-
         //sets message
         glucRange = (TextView) findViewById(R.id.rangeDisplay);
         glucRange.setText(message);
 
 
 
-
         //Populate arraylist with values and convert to list view
         //FIXME
 
-//        List<String> workoutList = new ArrayList<String>();
+        //List<String> workoutList = new ArrayList<String>();
         //workoutHistoryList.add("0.0");
-//        workoutList.add(Double.toString(glucoseVal));
+        //workoutList.add(glucoseVal);
 
 
 
         //Sends glucose value to be stored in history
         //FIXME
-//        Intent intent2 = new Intent(this, WorkoutHistory.class);
-//        intent2.putExtra("glucoseToHist", glucoseVal);
-//        startActivity(intent2);
+        //Intent intent2 = new Intent(this, WorkoutHistory.class);
+        //intent2.putExtra("glucoseToHist", glucoseVal);
+
+
 
         //Buttons to navigate
         Button retestGlucoseButton = findViewById(R.id.retest_glucose);
-        Button workoutHistoryButton = findViewById(R.id.workout_history);
+        //Button workoutHistoryButton = findViewById(R.id.workout_history);
 
         //set action go to AddReading page
         retestGlucoseButton.setOnClickListener(new View.OnClickListener() {
@@ -95,13 +93,14 @@ public class DisplayRangeInfo extends AppCompatActivity {
 
         //set action go to goToViewHistory page
         //future implementation
-        workoutHistoryButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                goToWorkoutHistory();
-            }
-
-        });
+//        workoutHistoryButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(intent2);
+//                goToWorkoutHistory();
+//            }
+//
+//        });
 
 
     }
