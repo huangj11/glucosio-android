@@ -248,13 +248,14 @@ public class AddGlucoseActivityWorkout extends AddReadingActivity {
 //        intent2.putExtra("glucose", glucose);
 //        startActivity(intent2);
 
-        /*AddGlucosePresenterWorkout presenter = (AddGlucosePresenterWorkout) getPresenter();
+        AddGlucosePresenterWorkout presenter = (AddGlucosePresenterWorkout) getPresenter();
         String readingType;
         if (isCustomType) {
             readingType = typeCustomEditText.getText().toString();
         } else {
             readingType = readingTypeSpinner.getSpinner().getSelectedItem().toString();
         }
+
 
         if (this.isEditing()) {
             presenter.dialogOnAddButtonPressed(this.getAddTimeTextView().getText().toString(),
@@ -264,7 +265,7 @@ public class AddGlucoseActivityWorkout extends AddReadingActivity {
             presenter.dialogOnAddButtonPressed(this.getAddTimeTextView().getText().toString(),
                     this.getAddDateTextView().getText().toString(), readingTextView.getText().toString(),
                     readingType, notesEditText.getText().toString());
-        }*/
+        }
     }
 
     public void showErrorMessage() {

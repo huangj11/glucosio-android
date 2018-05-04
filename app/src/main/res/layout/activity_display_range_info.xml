@@ -83,17 +83,17 @@ Description: xml for DisplayRangeInfo
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-        <Button
-            android:id="@+id/workout_history"
-            android:layout_width="196dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="130dp"
-            android:layout_marginEnd="115dp"
-            android:layout_marginStart="115dp"
-            android:background="@color/glucosio_accent"
-            android:text="View Workout History"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+        <!--<Button-->
+            <!--android:id="@+id/workout_history"-->
+            <!--android:layout_width="196dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="130dp"-->
+            <!--android:layout_marginEnd="115dp"-->
+            <!--android:layout_marginStart="115dp"-->
+            <!--android:background="@color/glucosio_accent"-->
+            <!--android:text="View Workout History"-->
+            <!--app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--app:layout_constraintStart_toStartOf="parent" />-->
 
 </android.support.constraint.ConstraintLayout>

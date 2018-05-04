@@ -79,7 +79,10 @@ public class AddGlucosePresenterWorkout extends AddReadingPresenter {
                 if (!isReadingAdded) {
                     activity.showDuplicateErrorMessage();
                 } else {
-                    activity.finishActivity();
+                    //changed to finish so button would not jump back to main page
+                    //FIXME: data is not being stored/sent properly
+                    //activity.finishActivity();
+                    activity.finish();
                 }
             }
         } else {

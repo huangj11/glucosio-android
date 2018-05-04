@@ -82,7 +82,7 @@ public class DisplayRangeInfo extends AppCompatActivity {
 
         //Buttons to navigate
         Button retestGlucoseButton = findViewById(R.id.retest_glucose);
-        Button workoutHistoryButton = findViewById(R.id.workout_history);
+        //Button workoutHistoryButton = findViewById(R.id.workout_history);
 
         //set action go to AddReading page
         retestGlucoseButton.setOnClickListener(new View.OnClickListener() {
@@ -95,13 +95,13 @@ public class DisplayRangeInfo extends AppCompatActivity {
 
         //set action go to goToViewHistory page
         //future implementation
-        workoutHistoryButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                goToWorkoutHistory();
-            }
-
-        });
+//        workoutHistoryButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                goToWorkoutHistory();
+//            }
+//
+//        });
 
 
     }
@@ -130,10 +130,10 @@ public class DisplayRangeInfo extends AppCompatActivity {
 //    Pre-condition: Button properly implemented
 //    Post-condition: User is taken to page to view history
 //-----------------------------------------------------------------------------------------
-    private void goToWorkoutHistory() {
-        Intent intent = new Intent(this, WorkoutHistory.class);
-        startActivity(intent);
-    }
+//    private void goToWorkoutHistory() {
+//        Intent intent = new Intent(this, WorkoutHistory.class);
+//        startActivity(intent);
+//    }
 
     //Set toolbar action to take user back to MainActivity
     //-----------------------------------------------------------------------------------------
