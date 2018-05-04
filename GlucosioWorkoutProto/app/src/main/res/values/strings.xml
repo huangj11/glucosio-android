@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Glucosio</string>
+    <string name="workout_welcome"> Ready to work out? Let's get started! </string>
+    <string name="range1"> Placeholder </string>
+</resources>

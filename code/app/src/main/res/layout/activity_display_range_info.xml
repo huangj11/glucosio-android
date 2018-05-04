@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+/*
+Name: Julie Huang
+Course: CSC 415
+Semester: Spring 2018
+Instructor: Dr. Pulimood
+Project name: Assignment 4
+Description: This project utilizes the Glucosio open source code, and assists diabetic users in tracking their glucose levels. This projects seeks to implement a mode in which the user can enter in their glucose level and get information on their glucose level in relation to physical activity.
+
+Filename: activity_display_range_info.xml
+Description: xml for DisplayRangeInfo
+*/
+-->
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_reminders"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.glucosio.android.activity.DisplayRangeInfo">
+
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/activity_main_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@color/glucosio_pink"
+        android:minHeight="?android:attr/actionBarSize"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:titleTextAppearance="@style/Toolbar.WhiteText" />
+
+    <TextView
+        android:id="@+id/displayGlucose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="200dp"
+        android:layout_marginEnd="115dp"
+        android:layout_marginStart="115dp"
+        android:layout_marginTop="100dp"
+        android:textColor="@color/glucosio_text"
+        android:textSize="@dimen/abc_text_size_subhead_material"
+        app:layout_constraintBottom_toTopOf="@+id/retest_glucose"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_main_toolbar"
+        tools:text="TextView" />
+
+
+    <TextView
+        android:id="@+id/rangeDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="117dp"
+        android:layout_marginEnd="115dp"
+        android:layout_marginStart="115dp"
+        android:layout_marginTop="119dp"
+        android:textColor="@color/glucosio_text"
+        android:textSize="@dimen/abc_text_size_subhead_material"
+        app:layout_constraintBottom_toTopOf="@+id/retest_glucose"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_main_toolbar"
+        tools:text="@string/workout_range" />
+
+    <Button
+        android:id="@+id/retest_glucose"
+        android:layout_width="156dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="205dp"
+        android:layout_marginEnd="115dp"
+        android:layout_marginStart="115dp"
+        android:background="@color/glucosio_accent"
+        android:text="Test blood sugar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+        <!--<Button-->
+            <!--android:id="@+id/workout_history"-->
+            <!--android:layout_width="196dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="130dp"-->
+            <!--android:layout_marginEnd="115dp"-->
+            <!--android:layout_marginStart="115dp"-->
+            <!--android:background="@color/glucosio_accent"-->
+            <!--android:text="View Workout History"-->
+            <!--app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--app:layout_constraintStart_toStartOf="parent" />-->
+
+</android.support.constraint.ConstraintLayout>

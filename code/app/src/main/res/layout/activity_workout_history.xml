@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+/*
+Name: Julie Huang
+Course: CSC 415
+Semester: Spring 2018
+Instructor: Dr. Pulimood
+Project name: Assignment 4
+Description: This project utilizes the Glucosio open source code, and assists diabetic users in tracking their glucose levels. This projects seeks to implement a mode in which the user can enter in their glucose level and get information on their glucose level in relation to physical activity.
+
+Filename: activity_workout_history.xml
+Description: xml for WorkoutHistory
+*/
+-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_reminders"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.glucosio.android.activity.RemindersActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/activity_main_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@color/glucosio_pink"
+        android:minHeight="?android:attr/actionBarSize"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:titleTextAppearance="@style/Toolbar.WhiteText" />
+
+
+    <ListView
+        android:id="@+id/workoutHistList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/activity_main_toolbar" />
+
+
+</RelativeLayout>
+
